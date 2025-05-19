@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bali Food</title>
+    <link rel="stylesheet" href="food.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+            <div class="nav-links">
+            <a href="main.html" title="Home"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="choicesbali.html">Places</a>
+                    <a href="balihotels.html">Hotels</a>
+                    <a href="shoppingbali.html">Shopping</a>
+                    <a href="baliwether.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn" title="Feedback"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Feedback Form</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Your Feedback:</label>
+                    <textarea id="feedback" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d" alt="Nasi Goreng">
+            <div class="slide-info">
+                <h3>Nasi Goreng</h3>
+                <p>Traditional Indonesian fried rice with vegetables, egg, and special Balinese spices</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1633945274405-b6c8069047b0" alt="Babi Guling">
+            <div class="slide-info">
+                <h3>Babi Guling</h3>
+                <p>Balinese-style roasted pork seasoned with local spices and served with crispy skin</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1628430043175-0e8820df47c3" alt="Bebek Betutu">
+            <div class="slide-info">
+                <h3>Bebek Betutu</h3>
+                <p>Slow-cooked duck in rich Balinese herbs and spices, a royal Balinese delicacy</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1555126634-323283e090fa" alt="Satay Lilit">
+            <div class="slide-info">
+                <h3>Satay Lilit</h3>
+                <p>Minced fish satay wrapped around lemongrass stalks with aromatic Balinese spices</p>
+            </div>
+        </div>
+<!-- Update only the Sambal Matah slide -->
+<div class="slide">
+    <img src="https://images.unsplash.com/photo-1613292443284-8d10ef9383fe" alt="Sambal Matah">
+    <div class="slide-info">
+        <h3>Sambal Matah</h3>
+        <p>Fresh, spicy Balinese relish made with shallots, lemongrass, chilies, and coconut oil</p>
+    </div>
+</div>
+    <button class="prev-btn">❮</button>
+    <button class="next-btn">❯</button>
+</div>
+    <!-- First Block Section -->
+    <h3 class="h">Top French Restraunts in Bali</h3>
+    <section class="block-section">
+    <div class="block">
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g297701-d26358002-Reviews-Pasir_Ubud-Ubud_Gianyar_Regency_Bali.html"><h5>Pasir Ubud</h5>
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="Pasir Ubud"></a>
+    </div>
+    <div class="block">
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g297701-d25015679-Reviews-Kelapa_Poolside_Bar_Restaurant-Ubud_Gianyar_Regency_Bali.html"><h5>Kelapa Poolside Bar & Restaurant</h5>
+        <img src="https://images.unsplash.com/photo-1540541338287-41700207dee6" alt="Kelapa"></a>
+    </div>
+    <div class="block">
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g297701-d25130518-Reviews-Belle_Wine_Bar_Grazing_Boards-Ubud_Gianyar_Regency_Bali.html"><h5>Belle Wine Bar & Grazing Boards</h5>
+        <img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1" alt="Belle"></a>
+    </div>
+    <div class="block">
+        <a href="https://www.mycocotte.com/"><h5>My Cocotte Bistro</h5>
+        <img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b" alt="My Cocotte"></a>
+    </div>
+</section>
+
+    <!-- Second Block Section -->
+    <h3 class="h">Top Asian Restraunts in Bali</h3>
+    <section class="block-section">
+    <div class="block">
+        <a href="https://mamasanbali.com/"><h5>Mama San-Seminyak</h5>
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9" alt="Mama San"></a>
+    </div>
+    <div class="block">
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g297701-d25375492-Reviews-Cerita_Manisan-Ubud_Gianyar_Regency_Bali.html"><h5>Cerita Manisan-Ubud</h5>
+        <img src="https://images.unsplash.com/photo-1535016120720-40c646be5580" alt="Cerita"></a>
+    </div>
+    <div class="block">
+        <a href="https://noaa.live/"><h5>NOAA Asian Bistro-Seminyak</h5>
+        <img src="https://images.unsplash.com/photo-1583032015879-e5022cb87c3b" alt="NOAA"></a>
+    </div>
+    <div class="block">
+        <a href="https://gingermoonbali.com/"><h5>Ginger Moon Canteen-Seminyak</h5>
+        <img src="https://images.unsplash.com/photo-1562565652-a0d8f0c59eb4" alt="Ginger Moon"></a>
+    </div>
+</section>
+ 
+    <h3 class="h">Top Italian Restraunts in Bali</h3>
+    <section class="block-section">
+    <div class="block">
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g297698-d4016394-Reviews-Soleil-Nusa_Dua_Benoa_South_Kuta_Bali.html"><h5>Soleil</h5>
+        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141" alt="Soleil"></a>
+    </div>
+    <div class="block">
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g297698-d6026728-Reviews-Prego-Nusa_Dua_Benoa_South_Kuta_Bali.html"><h5>Prego</h5>
+        <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0" alt="Prego"></a>
+    </div>
+    <div class="block">
+        <a href="https://www.tripadvisor.com/Restaurant_Review-g10086747-d17643042-Reviews-Bondi_Restaurant-Tibubeneng_North_Kuta_Bali.html"><h5>Bondi Restaurant</h5>
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="Bondi"></a>
+    </div>
+    <div class="block">
+        <a href="https://bellacanggu.com/"><h5>Bella Cucina</h5>
+        <img src="https://images.unsplash.com/photo-1592417817098-8fd3d9eb14a5" alt="Bella"></a>
+    </div>
+</section>
+    <script src="food.js"></script>
+</body>
+</html>

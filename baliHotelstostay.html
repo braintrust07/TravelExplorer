@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zigzag Hotel Cards</title>
+  <style>
+    body {
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  position: relative;
+  width: 1000px;
+  height: 220px;
+}
+
+    .card {
+      position: absolute;
+      width: 220px;
+      height: 80px;
+      background-color: #fff7f7;
+      border: 2px solid #d00000;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      font-size: 14px;
+      transition: transform 0.3s;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card a {
+      text-decoration: none;
+      color: #d00000;
+      padding: 10px;
+      display: block;
+    }
+
+    /* Zigzag positions */
+    .card:nth-child(1) { top: 0px; left: 0px; }
+    .card:nth-child(2) { top: 120px; left: 170px; }
+    .card:nth-child(3) { top: 0px; left: 340px; }
+    .card:nth-child(4) { top: 120px; left: 510px; }
+    .card:nth-child(5) { top: 0px; left: 680px; }
+    .card:nth-child(6) { top: 120px; left: 850px; }
+
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="card"><a href="https://www.makemytrip.com/hotels/hotel-details/?hotelId=202412101651052188">Anandara Ubud Resort & Spa</a></div>
+    <div class="card"><a href="https://www.makemytrip.com/hotels/hotel-details/?hotelId=201904201445098600">Element by Westin Bali Ubud</a></div>
+    <div class="card"><a href="https://www.makemytrip.com/hotels/hotel-details/?hotelId=202203212154216400">Kalyana Ubud</a></div>
+    <div class="card"><a href="https://www.makemytrip.com/hotels/hotel-details/?hotelId=202308011446445734">Amarea Resort Ubud</a></div>
+    <div class="card"><a href="https://www.makemytrip.com/hotels/hotel-details/?hotelId=202002251633152847">Tejaprana Bisma</a></div>
+    <div class="card"><a href="https://www.makemytrip.com/hotels/hotel-details/?hotelId=201902011155569688">Anumana Ubud Hotel</a></div>
+  </div>
+
+</body>
+</html>

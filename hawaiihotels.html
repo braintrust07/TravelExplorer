@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotels in Hawaii</title>
+    <link rel="stylesheet" href="hawaiihotels.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+            <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="hawaiifood.html">Food</a>
+                    <a href="choiceshawaii.html">Places</a>
+                    <a href="shoppinghawaii.html">Shopping</a>
+                    <a href="hawaiiweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Left Sidebar -->
+        <div class="sidebar">
+            <div class="wishlist-section">
+                <h2>My Wishlist</h2>
+                <div id="wishlist-items"></div>
+            </div>
+            <div class="bookings-section">
+                <h2>My Bookings</h2>
+                <div id="booking-items"></div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main-content" id="hotels-container">
+            <!-- Hotel cards will be dynamically added here -->
+        </div>
+
+        <!-- Right Sidebar -->
+        <div class="right-sidebar">
+            <div class="coupon-section">
+                <h2>Special Offers</h2>
+                
+                <div class="coupon1">
+                    <img src="discount20.jpg" alt="Discount Coupon">
+                </div>
+                
+                <div class="coupon2">
+                    <img src="discount30.jpg" alt="Discount Coupon">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <!-- ... existing code ... -->
+<div id="booking-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Book Hotel</h2>
+        <form id="booking-form">
+            <input type="number" id="days" min="1" required placeholder="Number of days">
+            <div class="price-details">
+                <p>Price per day: ₹<span id="price-per-day">0</span></p>
+                <p>Total days: <span id="total-days">0</span></p>
+                <p>Subtotal: ₹<span id="subtotal">0</span></p>
+                <div class="coupon-input">
+                    <input type="text" id="coupon-code" placeholder="Enter coupon code (SAVE20 or HOLIDAY30)">
+                    <button type="button" onclick="applyCoupon()">Apply Coupon</button>
+                </div>
+                <p>Discount: -₹<span id="discount">0</span></p>
+                <p class="total">Total Amount: ₹<span id="total-amount">0</span></p>
+            </div>
+            <button type="submit">Pay Now</button>
+        </form>
+    </div>
+</div>
+<!-- ... existing code ... -->
+
+    <script src="hawaiihotels.js"></script>
+</body>
+</html>
+

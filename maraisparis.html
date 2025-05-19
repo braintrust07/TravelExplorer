@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Le Marais</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> <!-- Font -->
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+          }
+
+    .background-container {
+      position: relative;
+      width: 100%;
+      height:100vh;
+      overflow: hidden;
+          }
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('maraisparis.jpeg'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+    .black-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color:rgba(0, 0, 0, 0.3); /* Black opacity */
+      z-index: 2;
+    }
+
+    .content {
+      position: relative;
+      z-index: 3;
+      color: white;
+      text-align: left;
+      padding-top: 20%;
+      font-size: 22px;
+      margin-top:50px;
+margin-left:100px;
+
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-container">
+    <div class="background-image"></div>
+    <div class="black-overlay"></div>
+    <div class="content">
+      <h2>Le Marais</h2>
+<p><i><b>Known For:</b> Trendy boutiques, indie designers, vintage finds.<br>
+<b>Highlights:</b>Sandro, Maje, The Kooples, vintage stores.<br>
+<b>Vibe:</b>Hip, artsy, and youthful.<br>
+<b>Tip:</b>Go on a Sunday—shops here stay open while most others close.
+</i>
+</p>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Choices for Places</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+      background-color:rgba(0,0,0,0.4);
+    }
+
+    .image-row {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .image-link {
+      flex: 1;
+      display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .image-link img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    .image-link:hover img {
+      transform: scale(1.05);
+    }
+
+    .image-title {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      color: white;
+      padding: 6px 12px;
+      border-radius: 5px;
+      font-size: 40px;
+      font-family:'Brush Script MT',cursive;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="image-row">
+    <a href="placessydneysolo.html" class="image-link">
+      <img src="solo.jpg" alt="Image 1">
+      <div class="image-title">Solo</div>
+    </a>
+    <a href="placesfriendsydney.html" class="image-link">
+      <img src="friends.jpg" alt="Image 2">
+      <div class="image-title">Friends</div>
+    </a>
+    <a href="placessydneycouple.html" class="image-link">
+      <img src="couple.jpg" alt="Image 3">
+      <div class="image-title">Couples</div>
+    </a>
+    <a href="placessydneyfamily.html" class="image-link">
+      <img src="family.jpg" alt="Image 4">
+      <div class="image-title">Family</div>
+    </a>
+  </div>
+
+</body>
+</html>
