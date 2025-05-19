@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Royal Hawaiian Center</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet"> <!-- Font -->
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+          }
+
+    .background-container {
+      position: relative;
+      width: 100%;
+      height:100vh;
+      overflow: hidden;
+          }
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://dynamic-media-cdn.tripadvisor.com/media/photo-o/12/84/be/08/royal-hawaiian-center.jpg?w=1400&h=800&s=1'); 
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 1;
+}
+    .black-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color:rgba(0, 0, 0, 0.3); /* Black opacity */
+      z-index: 2;
+    }
+
+    .content {
+      position: relative;
+      z-index: 3;
+      color: white;
+      text-align: left;
+      padding-top: 20%;
+      font-size: 22px;
+      margin-top:50px;
+margin-left:100px;
+
+    }
+  </style>
+</head>
+<body>
+
+  <div class="background-container">
+    <div class="background-image"></div>
+    <div class="black-overlay"></div>
+    <div class="content">
+      <h2>Royal Hawaiian Center</h2>
+<p><i><b>Location:</b>2201 Kalākaua Ave, Honolulu, HI 96815<br>
+<b>Famous For:</b>A premier open-air shopping destination featuring luxury boutiques like Hermès and Fendi, diverse dining options, and complimentary Hawaiian cultural experiences in the historic Royal Grove
+<br>
+<b>Tip:</b>Take advantage of free hula and ukulele classes in The Royal Grove, and validate your parking with a purchase to save on fees .</i>
+</p>
+    </div>
+  </div>
+
+</body>
+</html>

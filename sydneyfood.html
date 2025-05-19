@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider and Blocks</title>
+    <link rel="stylesheet" href="food.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+        <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html" title="Home"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="choicesbali.html">Places</a>
+                    <a href="balihotels.html">Hotels</a>
+                    <a href="shoppingbali.html">Shopping</a>
+                    <a href="baliwether.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn" title="Feedback"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <!-- Feedback Modal -->
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Feedback Form</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="feedback">Your Feedback:</label>
+                    <textarea id="feedback" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+    <!-- Image Slider Section -->
+    <!-- Update only the slider section in the HTML -->
+<!-- Update only the slider section in the HTML -->
+<!-- Update the slider section -->
+<div class="slider-container">
+    <div class="slider">
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f" alt="Avocado Toast">
+            <div class="slide-info">
+                <h3>Sydney-Style Avocado Toast</h3>
+                <p>Sourdough topped with smashed avocado, poached eggs, feta, and dukkah - a Sydney café classic</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836" alt="Barramundi">
+            <div class="slide-info">
+                <h3>Grilled Barramundi</h3>
+                <p>Fresh Australian barramundi fillet with native herbs and lemon myrtle sauce</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1528735602780-2552fd46c7af" alt="Meat Pie">
+            <div class="slide-info">
+                <h3>Aussie Meat Pie</h3>
+                <p>Classic Australian meat pie filled with minced beef, gravy, and flaky pastry</p>
+            </div>
+        </div>
+        <div class="slide">
+            <img src="https://images.unsplash.com/photo-1589227365533-cee630bd59bd" alt="Pavlova">
+            <div class="slide-info">
+                <h3>Pavlova</h3>
+                <p>Light meringue dessert topped with fresh cream and tropical fruits</p>
+            </div>
+        </div>
+        <!-- Update only the Fish and Chips slide -->
+<div class="slide">
+    <img src="https://images.unsplash.com/photo-1579208030886-b937da0925dc" alt="Fish and Chips">
+    <div class="slide-info">
+        <h3>Sydney Fish & Chips</h3>
+        <p>Fresh-caught fish in crispy batter with thick-cut chips and lemon</p>
+    </div>
+</div>
+    </div>
+    <button class="prev-btn">❮</button>
+    <button class="next-btn">❯</button>
+</div>
+    <!-- First Block Section -->
+    <h3 class="h">Top French Restraunts in Sydney</h3>
+    <section class="block-section">
+    <div class="block">
+        <a href="https://martinez.sydney/"><h5>Martinez</h5>
+        <img src="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c" alt="martinez"></a>
+    </div>
+    <div class="block">
+        <a href="https://merivale.com/venues/felix/"><h5>Felix</h5>
+        <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7" alt="felix"></a>
+    </div>
+    <div class="block">
+        <a href="https://www.bentleyrestaurantgroup.com.au/monopole/"><h5>Monopole</h5>
+        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4" alt="monopole"></a>
+    </div>
+    <div class="block">
+        <a href="https://www.timeout.com/sydney/restaurants/chez-crix"><h5>Chez Crix</h5>
+        <img src="https://images.unsplash.com/photo-1560624052-449f5ddf0c31" alt="chez"></a>
+    </div>
+</section>
+
+
+    <!-- Second Block Section -->
+    <h3 class="h">Top Asian Restraunts in Sydney</h3>
+    <section class="block-section">
+    <div class="block">
+        <a href="https://www.thaipothong.com.au/"><h5>Thai Pothong</h5>
+        <img src="https://images.unsplash.com/photo-1559314809-0d155014e29e" alt="thai"></a>
+    </div>
+    <div class="block">
+        <a href="https://www.star.com.au/sydney/eat-and-drink/signature-dining/sokyo"><h5>Sokyo</h5>
+        <img src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c" alt="sokyo"></a>
+    </div>
+    <div class="block">
+        <a href="https://chinadoll.com.au/"><h5>China Doll</h5>
+        <img src="https://images.unsplash.com/photo-1525755662778-989d0524087e" alt="chinadoll"></a>
+    </div>
+    <div class="block">
+        <a href="https://spicealley.com.au/"><h5>Spice Alley</h5>
+        <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9" alt="spice"></a>
+    </div>
+</section>
+ 
+    <h3 class="h">Top Italian Restraunts in Sydney</h3>
+    <section class="block-section">
+    <div class="block">
+        <a href="https://ragazziwineandpasta.com/"><h5>Ragazzi</h5>
+        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141" alt="ragazzi"></a>
+    </div>
+    <div class="block">
+        <a href="https://fratelliparadiso.com/"><h5>Fratelli Paradiso</h5>
+        <img src="https://images.unsplash.com/photo-1481931098730-318b6f776db0" alt="fratelli"></a>
+    </div>
+    <div class="block">
+        <a href="https://www.tripadvisor.in/Restaurant_Review-g255060-d10357315-Reviews-Kindred-Sydney_New_South_Wales.html"><h5>Kindred</h5>
+        <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0" alt="kindred"></a>
+    </div>
+    <div class="block">
+        <a href="https://www.porteno.com.au/bastardo-surryhills"><h5>Bastardo</h5>
+        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5" alt="bastardo"></a>
+    </div>
+</section>
+    <script src="food.js"></script>
+</body>
+</html>
