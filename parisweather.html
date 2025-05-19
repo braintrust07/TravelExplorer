@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Paris Weather</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+body{
+background-image: url("weatherbackground.jpg");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 1380px;
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #c3cde6;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #c3cde6;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color:#c3cde6;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #666;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+    color: #FF9900;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #FF9900;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#feedbackForm button {
+    background-color:rgb(56, 201, 182);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#feedbackForm button:hover {
+    background-color:rgba(56, 201, 182, 0.8);
+}
+
+.places-container1 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: auto;
+}
+
+.places-container2 {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+    margin: auto;
+}
+
+.places-container1 img , .places-container2 img{
+   width: 120px;
+   height: 120px;
+}
+
+.one{
+padding:0px 10px;
+border-radius: 10px;
+background-color:rgba(255,255,255,0.5);
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.two{
+padding:0px 10px;
+border-radius: 10px;
+background-color:rgba(255,255,255,0.5);
+box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+</style>
+</head>
+
+<body>
+<nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="parisfood.html">Food</a>
+                    <a href="parishotels.html">Hotels</a>
+                    <a href="shoppingparis.html">Shopping</a>
+                    <a href="choicesparis.html">Places</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+<h2 style="color:rgba(255,255,255,0.8); margin:40px 85px;">Paris Weather</h2>
+<div class="places-container1">
+
+<div class="one">
+<h3>January</h3>
+<img src="thunderrain.png" alt="thunder">
+<p>Low season<br>17 days rain</p>
+</div>
+
+<div class="one">
+<h3>Febrauary</h3>
+<img src="rain.png" alt="rain">
+<p>Low season<br>13 days rain</p>
+</div>
+
+<div class="one">
+<h3>March</h3>
+<img src="rain.png" alt="rain">
+<p>Low season<br>14 days rain</p>
+</div>
+
+<div class="one">
+<h3>April</h3>
+<img src="rain.png" alt="mid">
+<p>Mid season<br>14 days rain</p>
+</div>
+
+<div class="one">
+<h3>May</h3>
+<img src="mid.png" alt="mid">
+<p>Mid season<br>9 days rain</p>
+</div>
+
+<div class="one">
+<h3>June</h3>
+<img src="mid.png" alt="sun">
+<p>Mid season<br>7 days rain</p>
+</div>
+</div>
+
+<br>
+
+<div class="places-container2">
+<div class="two">
+<h3>July</h3>
+<img src="rain.png" alt="sun">
+<p>Low season<br>11 days rain</p>
+</div>
+
+<div class="two">
+<h3>August</h3>
+<img src="mid.png" alt="sun">
+<p>Mid season<br>10 days rain</p>
+</div>
+
+<div class="two">
+<h3>September</h3>
+<img src="rain.png" alt="sun">
+<p>Mid season<br>11 days rain</p>
+</div>
+
+<div class="two">
+<h3>October</h3>
+<img src="thunderrain.png" alt="mid">
+<p>Low season<br>15 days rain</p>
+</div>
+
+<div class="two">
+<h3>November</h3>
+<img src="thunderrain.png" alt="rain">
+<p>Low season<br>16 days rain</p>
+</div>
+
+<div class="two">
+<h3>December</h3>
+<img src="thunderrain.png" alt="thunder">
+<p>Low season<br>17 days rain</p>
+</div>
+
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Card animations
+    const cards = document.querySelectorAll('.destination-card');
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('animate');
+        }, index * 200 + 500);
+    });
+
+    // Feedback modal functionality
+    const modal = document.getElementById('feedbackModal');
+    const feedbackBtn = document.getElementById('feedbackBtn');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const feedbackForm = document.getElementById('feedbackForm');
+
+    feedbackBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    feedbackForm.onsubmit = function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Here you can add code to handle the form submission
+        console.log('Feedback submitted:', { name, email, message });
+        
+        // Clear form and close modal
+        feedbackForm.reset();
+        modal.style.display = "none";
+        alert('Thank you for your feedback!');
+    }
+});
+</script>
+
+</body>
+</html>

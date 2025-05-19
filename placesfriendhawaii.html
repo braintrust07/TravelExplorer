@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawaii Beyond</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="placesfriends.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="hawaiifood.html">Food</a>
+                    <a href="hawaiihotels.html">Hotels</a>
+                    <a href="shoppinghawaii.html">Shopping</a>
+                    <a href="hawaiiweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <div class="container">
+
+        <div class="title-section">
+            <h1>Hawaii Beyond</h1>
+            <h2>Recommended Escapes for Friends</h2>
+        </div>
+
+        <div class="scroll-container">
+            <div class="places-wrapper">
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/66/ee/89/66ee892c275370ff6815ea9def0c283b.jpg" alt="Hawaii Volcano">
+                    </div>
+                    <div class="content">
+                        <h3>Hawaii Volcano National Park</h3>
+                        <ul class="features">
+                            <li>Active Volcanoes</li>
+                            <li>Lava Viewing</li>
+                            <li>Crater Rim Drive</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Hawai%CA%BBi+Volcanoes+National+Park/@19.3092067,-155.7653976,10z/data=!3m1!4b1!4m6!3m5!1s0x795161b6c0b9c9b1:0x3e5b7b263c84ae26!8m2!3d19.4963669!4d-155.4661859!16zL20vMDJyZ2Ix?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/53/59/20/535920e934208565818ac43a6ae09ddd.jpg" alt="Diamond Head">
+                    </div>
+                    <div class="content">
+                        <h3>Diamond Head Crater</h3>
+                        <ul class="features">
+                            <li>Summit Trail</li>
+                            <li>Panoramic Views</li>
+                            <li>Historic Bunkers</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Diamond+Head/@21.2620023,-157.8162985,15z/data=!3m1!4b1!4m6!3m5!1s0x7c0072619ae2ab3f:0xf7fe4029c4a94f59!8m2!3d21.261983!4d-157.8059987!16zL20vMDJseXo5?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/92/9a/8b/929a8b645fe27642eed46507ad83927d.jpg" alt="Haleakala">
+                    </div>
+                    <div class="content">
+                        <h3>Haleakala National Park</h3>
+                        <ul class="features">
+                            <li>Rainforest Trails</li>
+                            <li>Native Species</li>
+                            <li>Guided Tours</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Haleakal%C4%81+National+Park/@20.7036573,-156.2318754,12z/data=!3m1!4b1!4m6!3m5!1s0x7954b73425a04bd1:0x9c23fd88e8f5f4ca!8m2!3d20.7203826!4d-156.1551524!16zL20vMDM4d244?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/da/ba/ee/dabaeef4dd275647a807b740000490fb.jpg" alt="Makapuu">
+                    </div>
+                    <div class="content">
+                        <h3>Makapu'u Lighthouse</h3>
+                        <ul class="features">
+                            <li>Coastal Views</li>
+                            <li>Whale Watching</li>
+                            <li>Historic Site</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/search/v+in+hawaii/@20.4225486,-157.9018291,8z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/8f/b5/a1/8fb5a1eac50b4136141e9776ae6145ad.jpg" alt="Imiloa">
+                    </div>
+                    <div class="content">
+                        <h3>'Imiloa Astronomy Center</h3>
+                        <ul class="features">
+                            <li>Planetarium Shows</li>
+                            <li>Interactive Exhibits</li>
+                            <li>Cultural Programs</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Imiloa+Astronomy+Center/@19.7011223,-155.0912522,17z/data=!3m1!4b1!4m6!3m5!1s0x79524b366731d4b1:0x6dbb6eea0bdbaabc!8m2!3d19.7011173!4d-155.0886773!16zL20vMGJsYzdt?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/f6/84/09/f68409b31675da5094ed831c12bef837.jpg" alt="Iolani">
+                    </div>
+                    <div class="content">
+                        <h3>'Iolani Palace</h3>
+                        <ul class="features">
+                            <li>Royal History</li>
+                            <li>Guided Tours</li>
+                            <li>Cultural Heritage</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Iolani+Palace/@21.3067622,-157.8613446,17z/data=!4m6!3m5!1s0x7c006e7534be4cab:0x68b286145303e117!8m2!3d21.3067572!4d-157.8587697!16zL20vMDJkOWs0?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ... existing footer code ... -->
+
+
+            </div>
+    <script src="placesfriends.js"></script>
+</body>
+</html>

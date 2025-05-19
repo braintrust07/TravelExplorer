@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Beyond</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="placessolo.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="parisfood.html">Food</a>
+                    <a href="parishotels.html">Hotels</a>
+                    <a href="shoppingparis.html">Shopping</a>
+                    <a href="parisweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Paris Beyond</h1>
+            <p>"Calling all free spirits: It's time to roam like you own the road."</p>
+        </header>
+
+        <div class="destinations">
+            <div class="destination-card top">
+                <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f">
+                <h2>Eiffel Tower</h2>
+                <p>The Eiffel Tower is a world-famous landmark in Paris that attracts millions of tourists every year. Its stunning architecture and breathtaking views make it a must-visit symbol of France.</p>
+                <a href="https://www.google.com/maps/place/Eiffel+Tower/@48.8583701,2.2919064,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66e2964e34e2d:0x8ddca9ee380ef7e0!8m2!3d48.8583701!4d2.2944813!16zL20vMDJqODE?entry=ttu&g_ep=EgoyMDI1MDQyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a">
+                <h2>Seine River Cruise</h2>
+                <p>A Seine River Cruise offers a scenic journey through the heart of Paris, passing iconic landmarks like the Eiffel Tower, Notre-Dame, and the Louvre. It's a popular tourist attraction, perfect for enjoying the city's beauty by day or night.</p>
+                <a href="https://www.google.com/maps/place/SeineRiverCruise/@48.861474,2.293462,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66f0f9a71b251:0x12265a1b78aa190f!8m2!3d48.861474!4d2.2960369!16s%2Fg%2F11tsv0s1bn?entry=ttu&g_ep=EgoyMDI1MDQyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card top">
+                <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f">
+                <h2>Shakespeare & Company</h2>
+                <p>Shakespeare & Company is a historic English-language bookstore in Paris, located near the Seine and Notre-Dame Cathedral. It attracts book lovers and tourists alike with its cozy atmosphere, rich literary history, and famous past visitors like Ernest Hemingway.</p>
+                <a href="https://www.google.com/maps/place/Shakespeare+And+Company/@48.8617989,2.2968883,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66fde7152e76d:0x61219593ea4d8b1f!8m2!3d48.861799!4d2.3017592!16s%2Fg%2F11vbs2j643?entry=ttu&g_ep=EgoyMDI1MDQyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1630983358494-96012d838b84">
+                <h2>Musée de l'Orangerie</h2>
+                <p>The Musée de l'Orangerie in Paris is famous for Monet's stunning Water Lilies murals, displayed in peaceful oval rooms that create an immersive art experience. It also features masterpieces by Renoir, Picasso, and Matisse, making it a must-visit for art lovers.</p>
+                <a href="https://www.google.com/maps/place/Mus%C3%A9e+de+l'Orangerie/@48.8637884,2.3200975,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66e2eeaaaaaa3:0xdc3fd08aa701960a!8m2!3d48.8637884!4d2.3226724!16zL20vMGR0M21s?entry=ttu&g_ep=EgoyMDI1MDQyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card top">
+                <img src="https://images.unsplash.com/photo-1583265627959-fb7042f5133b">
+                <h2>Père Lachaise</h2>
+                <p>Père Lachaise Cemetery is Paris's most famous resting place, known for its serene beauty and historic charm. Tourists visit to see the graves of icons like Oscar Wilde, Jim Morrison, and Edith Piaf, set among peaceful tree-lined paths.</p>
+                <a href="https://www.google.com/maps/place/P%C3%A8re-Lachaise,+75020+Paris,+France/@48.8635936,2.3844917,15z/data=!3m1!4b1!4m6!3m5!1s0x47e66d8c3243e5f1:0x6f1e88de9b8bcb1e!8m2!3d48.8649156!4d2.3984761!16s%2Fg%2F1237k4jg?entry=ttu&g_ep=EgoyMDI1MDQyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1565099824688-e93eb20fe622">
+                <h2>Louvre Museum</h2>
+                <p>The Louvre Museum is the world's largest art museum and a historic monument in Paris, home to the iconic Mona Lisa and thousands of other masterpieces. Its grand architecture and vast art collection make it a top destination for tourists and culture lovers.</p>
+                <a href="https://www.google.com/maps/place/Louvre+Museum/@48.8606111,2.3350691,17z/data=!3m2!4b1!5s0x47f112d46c2f6eef:0xfb8a933f53aec2c6!4m6!3m5!1s0x47e671d877937b0f:0xb975fcfa192f84d4!8m2!3d48.8606111!4d2.337644!16zL20vMDRnZHI?entry=ttu&g_ep=EgoyMDI1MDQyMS4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="placessolo.js"></script>
+</body>
+</html>

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sydney with Family</title>
+  
+  <style>
+    body {
+      background-image:url("familybackground.jpg");
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-repeat:no-repeat;
+      background-size:1600px 1000px;
+    }
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 1380px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #4E71FF;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4E71FF;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: #4E71FF;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #666;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+    color: #4E71FF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #FF9900;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#feedbackForm button {
+    background-color: #FF9900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#feedbackForm button:hover {
+    background-color: #FF7700;
+}
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left:550px;
+      margin-top: 55px;
+      gap: 40px;
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .column.offset {
+      margin-top: 50px;
+    }
+    .image-container {
+      max-width: 160px;
+      margin: 0 auto;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background:rgb(255, 255, 255);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .image-container img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+    .place-title {
+      margin: 12px 0 8px 0px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000000;
+    }
+    .place-description {
+      font-size: 0.85rem;
+      margin: 0 8px 12px 8px;
+      color: #000000;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .view-map {
+      margin-top: 10px;
+      display: block;
+      color: #4E71FF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .view-map:hover {
+      color: #4E71FF;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="sydneyfood.html">Food</a>
+                    <a href="sydneyhotels.html">Hotels</a>
+                    <a href="shoppingsydney.html">Shopping</a>
+                    <a href="sydneyweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+<div class="gallery">
+  
+  <!-- Column 1 -->
+  <div class="column">
+    <div class="image-container" style="margin-top: 120px;">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://thumbs.dreamstime.com/b/sunrise-sydney-harbor-bridge-north-88871661.jpg" alt="harbour sunrise">
+      </a>
+      <h3 class="place-title">Harbour sunrise</h3>
+      <p class="place-description">Sydney Harbour is famous for its beauty and iconic landmarks.
+</p>
+      <a href="https://www.google.com/maps/place/Port+Jackson+Bay/@-33.8462198,151.2400794,4146m/data=!3m1!1e3!4m6!3m5!1s0x6b12ac304e3d1361:0x17072712870ae005!8m2!3d-33.8462182!4d151.2488616!16zL20vMDFyZnlj?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 2 -->
+  <div class="column">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.0o8bkWkZWf3WPorvpKF_nQHaEj&pid=Api&P=0&h=180" alt="blue mountains">
+      </a>
+      <h3 class="place-title">Blue Mountains</h3>
+      <p class="place-description">The Blue Mountains near Sydney are known for their scenic cliffs and eucalyptus forests.
+</p>
+      <a href="https://www.google.com/maps/search/blue+mountains+in+sydney/@-33.3856303,150.4865273,354464m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.DRykVVTyLcvY0kPmG-8ZtQHaE7&pid=Api&P=0&h=180" alt="elizabeth bay house">
+      </a>
+      <h3 class="place-title">Elizabeth Bay House</h3>
+      <p class="place-description">Elizabeth Bay House is a historic Greek Revival mansion in Sydney, built in the 1830s.
+</p>
+      <a href="https://www.google.com/maps/place/Elizabeth+Bay+House/@-33.8700537,151.2264207,688m/data=!3m3!1e3!4b1!5s0x6b12ae7399ab0c53:0x2822e2fa39978283!4m6!3m5!1s0x6b12ae7398ff2b9f:0xdd98ec83b075f38f!8m2!3d-33.8700537!4d151.2264207!16s%2Fm%2F0273kwv?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 3 (offset) -->
+  <div class="column offset">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://res.cloudinary.com/adrenalinecomau/image/upload/q_auto,f_auto/v1653893613/adventures/eps_18645.jpg" alt="Atelier deslumieres lepetit prince">
+      </a>
+      <h3 class="place-title">Whale Watching Adventure Cruise</h3>
+      <p class="place-description">Sydney's whale watching cruises offer the chance to see humpback and southern right whales migrating along the coast.
+</p>
+      <a href="https://www.google.com/maps/search/whale+watching+adventure+cruise+in+sydney/@-33.8690096,151.2267717,2754m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.H6Sjkz_DiRsItQGGj62lxwHaE8&pid=Api&P=0&h=180" alt="Moulin rouge carbaret show">
+      </a>
+      <h3 class="place-title">BigBus Hop-on Hop-off</h3>
+      <p class="place-description">Big Bus Hop-on Hop-off in Sydney offers a flexible sightseeing tour with multiple routes, covering iconic landmarks and attractions.
+</p>
+<a href="https://www.google.com/maps/place/Big+Bus+Tours+Sydney/@-33.8609046,151.2114994,689m/data=!3m2!1e3!4b1!4m6!3m5!1s0x6b12ae39aa2971b1:0xdb7105651c511f64!8m2!3d-33.8609046!4d151.2114994!16s%2Fg%2F11dflg7k2j?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 4 -->
+  <div class="column" style="margin-top:200px;">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://assets.atdw-online.com.au/images/bea974b08cfab89d4be10d5623d190c1.jpeg?rect=0%2C0%2C3264%2C2448&w=745&h=559&&rot=360&q=eyJ0eXBlIjoibGlzdGluZyIsImxpc3RpbmdJZCI6IjU2YjI0M2EyZDI3MDE1NGI0NTU0NWMxZCIsImRpc3RyaWJ1dG9ySWQiOiI1NmIxZWI5MzQ0ZmVjYTNkZjJlMzIwYzgiLCJhcGlrZXlJZCI6IjU2YjFlZTU5MGNmMjEzYWQyMGRjNTgxOSJ9" alt="Versailles palace and gardens">
+      </a>
+      <h3 class="place-title">Snorkeling Tour</h3>
+      <p class="place-description">Sydney offers snorkeling tours at various locations like Manly and Bondi Beach, allowing visitors to explore vibrant marine life in crystal-clear waters.
+</p>
+      <a href="https://www.google.com/maps/search/snorkelling+tour+in+sydney/@-33.8609046,151.2114994,5508m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+</div>
+<script>
+// Feedback modal functionality
+    const modal = document.getElementById('feedbackModal');
+    const feedbackBtn = document.getElementById('feedbackBtn');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const feedbackForm = document.getElementById('feedbackForm');
+
+    feedbackBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    feedbackForm.onsubmit = function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Here you can add code to handle the form submission
+        console.log('Feedback submitted:', { name, email, message });
+        
+        // Clear form and close modal
+        feedbackForm.reset();
+        modal.style.display = "none";
+        alert('Thank you for your feedback!');
+    }
+});
+</script>
+
+</body>
+</html>

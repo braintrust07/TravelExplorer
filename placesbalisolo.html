@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bali Beyond</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="placessolo.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="balifood.html">Food</a>
+                    <a href="balihotels.html">Hotels</a>
+                    <a href="shoppingbali.html">Shopping</a>
+                    <a href="baliweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <header>
+            <h1>Bali Beyond</h1>
+            <p>"Find yourself in the magic of Bali's spiritual paradise"</p>
+        </header>
+
+        <div class="destinations">
+            <div class="destination-card top">
+                <img src="https://images.unsplash.com/photo-1537996194471-e657df975ab4">
+                <h2>Ubud</h2>
+                <p>Immerse yourself in spiritual wellness at Ubud's yoga barns, meditation retreats, and peaceful rice fields. A perfect sanctuary for self-discovery and inner peace.</p>
+                <a href="https://goo.gl/maps/ubud" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1577717903315-1691ae25ab3f">
+                <h2>Amed</h2>
+                <p>A tranquil beach town where solo travelers can find solitude in crystal-clear waters. Perfect for snorkeling and diving adventures in peaceful surroundings.</p>
+                <a href="https://goo.gl/maps/amed" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card top">
+                <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47" alt="Sidemen Valley">
+                <h2>Sidemen Valley</h2>
+                <p>Escape the crowds in this hidden gem, where authentic Balinese culture thrives among stunning valley views and traditional villages.</p>
+                <a href="https://goo.gl/maps/sidemen" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1604999333679-b86d54738315">
+                <h2>Tanah Lot Temple</h2>
+                <p>Experience spiritual serenity at this iconic ocean temple, especially magical during sunset when the sky paints a perfect backdrop for peaceful contemplation.</p>
+                <a href="https://goo.gl/maps/tanahlot" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card top">
+                <img src="https://images.unsplash.com/photo-1531881503977-91282087e0c6">
+                <h2>Munduk</h2>
+                <p>Find solitude in this misty mountain village, where hidden waterfalls and peaceful hiking trails offer the perfect setting for self-reflection and nature connection.</p>
+                <a href="https://goo.gl/maps/munduk" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1558005530-a7958896ec60">
+                <h2>Mount Batur</h2>
+                <p>Challenge yourself with a transformative sunrise trek up this sacred volcano. A solo adventure that rewards with breathtaking views and a sense of achievement.</p>
+                <a href="https://goo.gl/maps/mountbatur" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+        </div>
+    </div>
+   <script src="placessolo.js"></script>
+</body>
+</html>

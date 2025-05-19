@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paris Beyond</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="placesfriends.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="parisfood.html">Food</a>
+                    <a href="parishotels.html">Hotels</a>
+                    <a href="shoppingparis.html">Shopping</a>
+                    <a href="parisweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="title-section">
+            <h1>Paris Beyond</h1>
+            <h2>Recommended Escapes for Friends</h2>
+        </div>
+
+        <div class="scroll-container">
+            <div class="places-wrapper">
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/0e/07/e2/0e07e2bed848df25b06713bf3109bcf4.jpg" alt="Eiffel Tower">
+                    </div>
+                    <div class="content">
+                        <h3>Eiffel Tower</h3>
+                        <ul class="features">
+                            <li>Skip-the-line Entry</li>
+                            <li>Summit Access</li>
+                            <li>Night Tour</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Eiffel+Tower/@48.8583736,2.2919064,17z/data=!3m1!4b1!4m6!3m5!1s0x47e66e2964e34e2d:0x8ddca9ee380ef7e0!8m2!3d48.8583701!4d2.2944813!16zL20vMDJqODE?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/e2/ad/25/e2ad2533ec660125e2ca38bd312ecb26.jpg" alt="Versailles Palace">
+                    </div>
+                    <div class="content">
+                        <h3>Versailles Palace</h3>
+                        <ul class="features">
+                            <li>Palace Entry</li>
+                            <li>Garden Access</li>
+                            <li>Hall of Mirrors</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Palace+of+Versailles/@48.8048684,2.1177805,17z/data=!3m2!4b1!5s0x47e67dbeb2a2d1cb:0xfaa83490b67c0c36!4m6!3m5!1s0x47e67d94d7b14c75:0x538fcc15f59ce8f!8m2!3d48.8048649!4d2.1203554!16zL20vMGRfNjE?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/2c/d8/6f/2cd86f388f659fba99038989a6c318b5.jpg" alt="Louvre Museum">
+                    </div>
+                    <div class="content">
+                        <h3>Louvre Museum</h3>
+                        <ul class="features">
+                            <li>Priority Access</li>
+                            <li>Mona Lisa Visit</li>
+                            <li>Guided Tour</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Louvre+Museum/@48.8606146,2.3350691,17z/data=!3m2!4b1!5s0x47f112d46c2f6eef:0xfb8a933f53aec2c6!4m6!3m5!1s0x47e671d877937b0f:0xb975fcfa192f84d4!8m2!3d48.8606111!4d2.337644!16zL20vMDRnZHI?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/f5/14/63/f51463bb049fc2a6439c7307d761cfb9.jpg" alt="Montmartre">
+                    </div>
+                    <div class="content">
+                        <h3>Paris Montmartre</h3>
+                        <ul class="features">
+                            <li>Sacré-Cœur Visit</li>
+                            <li>Artist Square</li>
+                            <li>Local Guide</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/search/Paris+Montmartre+in+paris/@48.8589385,2.2646332,12z?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/a2/47/a5/a247a57509c7d87857647603afb93a59.jpg" alt="Seine River">
+                    </div>
+                    <div class="content">
+                        <h3>Seine River</h3>
+                        <ul class="features">
+                            <li>Sunset Cruise</li>
+                            <li>Dinner Option</li>
+                            <li>City Views</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Paris,+France/@48.8589385,2.2646332,12z/data=!3m1!4b1!4m6!3m5!1s0x47e66e1f06e2b70f:0x40b82c3688c9460!8m2!3d48.8575475!4d2.3513765!16zL20vMDVxdGo?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/40/5f/ea/405fea23b6b01f8de5f8e12ac96e6232.jpg" alt="Monte Walking">
+                    </div>
+                    <div class="content">
+                        <h3>Monte Walking Tour</h3>
+                        <ul class="features">
+                            <li>Hidden Paths</li>
+                            <li>Local Stories</li>
+                            <li>Photo Spots</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/search/Monte+Walking+Tour+in+paris/@48.8727635,2.2646332,12z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+            </div>
+    <script src="placesfriends.js"></script>
+</body>
+</html>

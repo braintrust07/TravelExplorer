@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Paris Beyond</title>
+    <link rel="stylesheet" href="placescouple.css">
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="parisfood.html">Food</a>
+                    <a href="parishotels.html">Hotels</a>
+                    <a href="shoppingparis.html">Shopping</a>
+                    <a href="parisweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+
+        <div class="h">
+        <h1>Paris Beyond</h1>
+        <p class="tagline">"Where every moment becomes a romantic memory"</p>
+        </div>
+
+    <main>
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <div class="art-piece">
+                    <img src="https://images.unsplash.com/photo-1511739001486-6bfe10ce785f" alt="Eiffel Tower">
+                    <div class="art-info">
+                        <h3>Eiffel Tower</h3>
+                        <p>The Eiffel Tower is a world-famous landmark in Paris that attracts millions of tourists every year. Its stunning architecture and breathtaking views make it a must-visit symbol of France.</p>
+                        <a href="https://goo.gl/maps/Eiffel" class="map-link">View on Map</a>
+                    </div>
+                </div>
+                <div class="art-piece">
+                    <img src="https://images.unsplash.com/photo-1565099824688-e93eb20fe622" alt="Louvre Museum">
+                    <div class="art-info">
+                        <h3>Louvre Museum</h3>
+                        <p>The Louvre Museum is the world's largest art museum and a historic monument in Paris, home to the iconic Mona Lisa and thousands of other masterpieces.</p>
+                        <a href="https://goo.gl/maps/Louvre" class="map-link">View on Map</a>
+                    </div>
+                </div>
+                <div class="art-piece">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a" alt="Seine River Cruise">
+                    <div class="art-info">
+                        <h3>Seine River Cruise</h3>
+                        <p>A Seine River Cruise offers a scenic journey through the heart of Paris, passing iconic landmarks like the Eiffel Tower, Notre-Dame, and the Louvre.</p>
+                        <a href="https://goo.gl/maps/Seine" class="map-link">View on Map</a>
+                    </div>
+                </div>
+                <div class="art-piece">
+                    <img src="https://c2.staticflickr.com/4/3727/12203329724_e8b562ac91_b.jpg" alt="Pont des Arts">
+                    <div class="art-info">
+                        <h3>Pont des Arts</h3>
+                        <p>The Pont des Arts is a picturesque pedestrian bridge in Paris, offering stunning views of the Seine and connecting the Louvre to the Institut de France.</p>
+                        <a href="https://goo.gl/maps/PontDesArts" class="map-link">View on Map</a>
+                    </div>
+                </div>
+                <div class="art-piece">
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.v8_4wdHBp_EejrgO-jG1LwHaEJ&pid=Api&P=0&h=180" alt="Dinner Cruise">
+                    <div class="art-info">
+                        <h3>Dinner Cruise on the Seine</h3>
+                        <p>A Dinner Cruise on the Seine offers a magical experience, combining gourmet cuisine with breathtaking views of Paris's iconic landmarks illuminated at night.</p>
+                        <a href="https://goo.gl/maps/SeineDinner" class="map-link">View on Map</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Card animations
+    const cards = document.querySelectorAll('.destination-card');
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('animate');
+        }, index * 200 + 500);
+    });
+
+    // Feedback modal functionality
+    const modal = document.getElementById('feedbackModal');
+    const feedbackBtn = document.getElementById('feedbackBtn');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const feedbackForm = document.getElementById('feedbackForm');
+
+    feedbackBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    feedbackForm.onsubmit = function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Here you can add code to handle the form submission
+        console.log('Feedback submitted:', { name, email, message });
+        
+        // Clear form and close modal
+        feedbackForm.reset();
+        modal.style.display = "none";
+        alert('Thank you for your feedback!');
+    }
+});
+</script>
+</body>
+</html>

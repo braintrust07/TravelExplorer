@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hawaii Beyond</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="placessolo.css">
+</head>
+<body>
+
+     <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="hawaiifood.html">Food</a>
+                    <a href="hawaiihotels.html">Hotels</a>
+                    <a href="shoppinghawaii.html">Shopping</a>
+                    <a href="hawaiiweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <div class="container">
+        <header>
+            <h1>Hawaii Beyond</h1>
+            <p>"Aloha Spirit: Your Solo Paradise Adventure Awaits"</p>
+        </header>
+
+        <div class="destinations">
+            <div class="destination-card top">
+                <img src="https://images.unsplash.com/photo-1542259009477-d625272157b7">
+                <h2>Waikiki Beach</h2>
+                <p>Perfect for solo travelers seeking both solitude and social connection. Take surfing lessons, join beach yoga classes, or simply unwind on the iconic shoreline. The beach's vibrant atmosphere makes it easy to meet fellow travelers.</p>
+                <a href="https://goo.gl/maps/waikiki" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6" alt="Diamond Head">
+                <h2>Diamond Head Trail</h2>
+                <p>A rewarding solo hike offering breathtaking panoramic views of Honolulu. This moderate trail is well-marked and popular among solo travelers, making it both safe and social. Perfect for sunrise adventures.</p>
+                <a href="https://goo.gl/maps/diamondhead" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card top">
+                <img src="https://images.unsplash.com/photo-1507699622108-4be3abd695ad" alt="North Shore">
+                <h2>North Shore</h2>
+                <p>Experience the laid-back Hawaiian lifestyle at its finest. Watch pro surfers, explore food trucks, and find peaceful spots along the seven-mile miracle of beaches. Perfect for independent adventurers seeking authenticity.</p>
+                <a href="https://goo.gl/maps/northshore" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1598135753163-6167c1a1ad65" alt="Hanauma Bay">
+                <h2>Hanauma Bay</h2>
+                <p>A natural marine sanctuary perfect for solo snorkeling adventures. The protected bay offers safe, clear waters teeming with tropical fish and sea turtles. Educational programs available for solo visitors.</p>
+                <a href="https://goo.gl/maps/hanaumabay" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card top">
+                 <img src="https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b" alt="Manoa Falls">
+                <h2>Manoa Falls Trail</h2>
+                <p>A peaceful rainforest hike leading to a stunning 150-foot waterfall. This well-maintained trail offers solo hikers a safe yet immersive nature experience. The lush surroundings provide perfect spots for meditation and photography.</p>
+                <a href="https://goo.gl/maps/manoafalls" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1505852679233-d9fd70aff56d">
+                <h2>Lanikai Beach</h2>
+                <p>Often rated as one of the world's best beaches, this peaceful paradise offers crystal clear waters and powdery sand. Perfect for solo kayaking to the Mokulua Islands or finding your own quiet spot to relax.</p>
+                <a href="https://goo.gl/maps/lanikai" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+        </div>
+    </div>
+   <script src="placessolo.js"></script>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney Beyond</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="placessolo.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="sydneyfood.html">Food</a>
+                    <a href="sydneyhotels.html">Hotels</a>
+                    <a href="shoppingsydney.html">Shopping</a>
+                    <a href="sydneyweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <header>
+            <h1>Sydney Beyond</h1>
+            <p>"Discover the harbor city's hidden gems on your own terms"</p>
+        </header>
+
+        <div class="destinations">
+            <div class="destination-card top">
+                <img src="https://images.unsplash.com/photo-1523428096881-5bd79d043006">
+                <h2>Bondi to Coogee Walk</h2>
+                <p>A stunning 6km coastal walk perfect for solo travelers, offering dramatic ocean views, hidden beaches, and peaceful spots for reflection. Stop at cafes along the way or join beach yoga sessions.</p>
+                <a href="https://goo.gl/maps/bondi" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1506973035872-a4ec16b8e8d9">
+                <h2>Royal Botanic Garden</h2>
+                <p>A peaceful oasis in the heart of Sydney, perfect for solo wandering. Enjoy harbor views, native flora, and quiet spots for reading or meditation with the Opera House backdrop.</p>
+                <a href="https://goo.gl/maps/botanicgardens" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card top">
+                <img src="https://images.unsplash.com/photo-1590716209211-ea74d5f63573">
+                <h2>Newtown</h2>
+                <p>Sydney's bohemian heart, ideal for solo exploration. Discover vintage shops, independent bookstores, street art, and eclectic cafes. Perfect for people-watching and cultural immersion.</p>
+                <a href="https://goo.gl/maps/newtown" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1545044846-351ba102b6d5">
+                <h2>Manly Beach</h2>
+                <p>Take the scenic ferry ride to this laid-back beach suburb. Perfect for solo surfers, beach walks, and coastal cafes. Join local yoga classes or try stand-up paddleboarding.</p>
+                <a href="https://goo.gl/maps/manly" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card top">
+                <img src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c">
+                <h2>Blue Mountains</h2>
+                <p>A perfect day trip for solo adventurers. Explore hiking trails, waterfalls, and dramatic lookouts. Join guided walks or meditate in nature at this World Heritage site.</p>
+                <a href="https://goo.gl/maps/bluemountains" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+
+            <div class="destination-card bottom">
+                <img src="https://images.unsplash.com/photo-1552560880-2482cef14240">
+                <h2>Surry Hills</h2>
+                <p>A trendy neighborhood perfect for solo dining and cafe hopping. Explore art galleries, design stores, and some of Sydney's best coffee spots. Great for meeting locals and digital nomads.</p>
+                <a href="https://goo.gl/maps/surryhills" target="_blank">
+                    <i class="fas fa-map-marker-alt"></i> View on Maps
+                </a>
+            </div>
+        </div>
+    </div>
+   <script src="placessolo.js"></script>
+</body>
+</html>

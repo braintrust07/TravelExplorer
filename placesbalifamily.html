@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bali with Family</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      background-image:url("familybackground.jpg");
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-repeat:no-repeat;
+      background-size:1600px 950px;
+}
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 1380px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #4E71FF;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4E71FF;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: #4E71FF;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #666;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+    color: #4E71FF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #FF9900;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#feedbackForm button {
+    background-color: #FF9900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#feedbackForm button:hover {
+    background-color: #FF7700;
+}
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left:550px;
+      margin-top: 55px;
+      gap: 40px;
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .column.offset {
+      margin-top: 50px;
+    }
+    .image-container {
+      max-width: 160px;
+      margin: 0 auto;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background:rgb(255, 255, 255);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .image-container img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+    .place-title {
+      margin: 12px 0 8px 0px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000000;
+    }
+    .place-description {
+      font-size: 0.85rem;
+      margin: 0 8px 12px 8px;
+      color: #000000;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .view-map {
+      margin-top: 10px;
+      display: block;
+      color: #4E71FF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .view-map:hover {
+      color: #4E71FF;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="balifood.html">Food</a>
+                    <a href="balihotels.html">Hotels</a>
+                    <a href="shoppingbali.html">Shopping</a>
+                    <a href="baliweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+<div class="gallery">
+  <!-- Column 1 -->
+  <div class="column" style="margin-top: 120px;">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://i.pinimg.com/736x/99/49/f4/9949f4d86bf6ef0793a141163a66cfce.jpg" alt="riug paragliding">
+      </a>
+      <h3 class="place-title">RIUG Paragliding</h3>
+      <p class="place-description">Riug Paragliding in Bali offers thrilling aerial adventures with stunning coastal and cliffside views.
+</p>
+      <a href="https://www.google.com/maps/place/(Paragliding+Bali)+Riug+Paragliding/@-8.8351965,115.2061068,819m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd25c95abe5ad11:0x2886db964b89cbf4!8m2!3d-8.8352018!4d115.2086817!16s%2Fg%2F11df7k338g?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 2 -->
+  <div class="column">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://i.pinimg.com/736x/c1/99/78/c199789d063183e4a1cb5b8e6ff384f8.jpg" alt="ubud palace">
+      </a>
+      <h3 class="place-title">Ubud Palace</h3>
+      <p class="place-description">Ubud Palace in Bali is a historic royal residence known for its traditional Balinese architecture and vibrant cultural performances.</p>
+      <a href="https://www.google.com/maps/place/Ubud+Palace/@-8.5065924,115.2600135,820m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd23d6af37eb24b:0x4bcdf69a281c3f32!8m2!3d-8.5065977!4d115.2625884!16s%2Fm%2F012nzpgj?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://i.pinimg.com/736x/22/04/54/220454b05ba3657310b30a574528a3f5.jpg" alt="bali swing">
+      </a>
+      <h3 class="place-title">Bali Swing</h3>
+      <p class="place-description">The Bali Swing offers breathtaking jungle views and an exhilarating experience as you soar high above the lush landscapes of Ubud.</p>
+      <a href="https://www.google.com/maps/place/Real+Bali+Swing/@-8.4906294,115.2374045,820m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd23d2bb78f98e5:0xdc87cb5e74348952!8m2!3d-8.4906347!4d115.2399794!16s%2Fg%2F11dxl6hnl9?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 3 (offset) -->
+  <div class="column offset">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://www.whitewaterwest.com/wp-content/uploads/2019/11/Hero-Overview-Waterbom-Bali-Kuta-Bali.jpg" alt="waterbom">
+      </a>
+      <h3 class="place-title">Water Bom</h3>
+      <p class="place-description">Waterbom Bali is a popular water park in Kuta, known for its thrilling slides, lush tropical setting, and family-friendly atmosphere.
+</p>
+      <a href="https://www.google.com/maps/place/Waterbom+Bali/@-8.7285776,115.1667151,820m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd246a3ee8f82df:0x1291d693f3407fa5!8m2!3d-8.7285829!4d115.16929!16s%2Fg%2F1tdz276n?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.xlKbO-y7W0MmdaQWfc8NVAHaEo&pid=Api&P=0&h=180" alt="Moulin rouge carbaret show">
+      </a>
+      <h3 class="place-title">Nusa  Lembongan</h3>
+      <p class="place-description">Tranquil island off Bali’s southeast coast, known for its crystal-clear waters, vibrant coral reefs, and relaxed atmosphere.</p>
+<a href="https://www.google.com/maps/place/Nusa+Lembongan/@-8.6788515,115.45006,6557m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd26d9f537b69f3:0xdc1b94bd6c67a033!8m2!3d-8.6785828!4d115.4555858!16s%2Fm%2F06znd0q?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 4 -->
+  <div class="column" style="margin-top: 200px;">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.DOLBqi-hpQdoZY9__8uHZgHaEK&pid=Api&P=0&h=180" alt="Versailles palace and gardens">
+      </a>
+      <h3 class="place-title">Penida Island</h3>
+      <p class="place-description">Penida Island in Bali is a stunning paradise known for its dramatic cliffs, crystal-clear waters, and vibrant marine life.</p>
+      <a href="https://www.google.com/maps/place/Penida+Island/@-8.745573,115.5376405,26224m/data=!3m2!1e3!4b1!4m6!3m5!1s0x2dd271194d1319d3:0x5c3a3706b2197b7b!8m2!3d-8.727807!4d115.5444231!16zL20vMGJicnhm?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+</div>
+<script>
+// Feedback modal functionality
+    const modal = document.getElementById('feedbackModal');
+    const feedbackBtn = document.getElementById('feedbackBtn');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const feedbackForm = document.getElementById('feedbackForm');
+
+    feedbackBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    feedbackForm.onsubmit = function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Here you can add code to handle the form submission
+        console.log('Feedback submitted:', { name, email, message });
+        
+        // Clear form and close modal
+        feedbackForm.reset();
+        modal.style.display = "none";
+        alert('Thank you for your feedback!');
+    }
+});
+</script>
+</body>
+</html>

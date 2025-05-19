@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <title>Hawaii Beyond</title>
+    <link rel="stylesheet" href="placescouple.css">
+</head>
+<body>
+        <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="hawaiifood.html">Food</a>
+                    <a href="hawaiihotels.html">Hotels</a>
+                    <a href="shoppinghawaii.html">Shopping</a>
+                    <a href="hawaiiweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+        <div class="h">
+        <h1>Hawaii Beyond</h1>
+        <p class="tagline">"Where every moment becomes a romantic memory"</p>
+        </div>
+
+    <main>
+        <section class="gallery-section">
+            <div class="gallery-container">
+                <div class="art-piece">
+                    <img src="https://i.pinimg.com/736x/f8/36/49/f836496c896d3aef12f4386a9b1d93cd.jpg" alt="Mt.Waialeale">
+                    <div class="art-info">
+                        <h3>Mt.Waialeale</h3>
+                        <p>one of the wettest places on Earth, known for its lush landscapes and dramatic waterfalls in Kauai, Hawaii.</p>
+                        <a href="https://www.google.com/maps/place/Waialeale/@22.0706519,-159.4961272,3073m/data=!3m2!1e3!4b1!4m6!3m5!1s0x7c06fd3ef1daad11:0xa8983d072c106223!8m2!3d22.0706522!4d-159.4961272!16zL20vMDR5MWZo?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+                <div class="art-piece">
+                    <img src="https://i.pinimg.com/736x/0c/72/f8/0c72f81250e0a0c2af6cef3ded5bef81.jpg" alt="Halona Blowhole">
+                    <div class="art-info">
+                        <h3>Halona Blowhole</h3>
+                        <p>Witness the natural spectacle of the Halona Blowhole in Hawaii, where ocean waves shoot water high into the air through a rock formation.
+</p>
+                        <a href="https://www.google.com/maps/place/Halona+Blow+Hole/@21.2821571,-157.676693,3090m/data=!3m2!1e3!4b1!4m6!3m5!1s0x7c001222bd45f7d5:0xceef644a2a19fd30!8m2!3d21.2821575!4d-157.676693!16s%2Fm%2F0260_9l?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+                <div class="art-piece">
+                    <img src="https://i.pinimg.com/736x/19/4c/c5/194cc526ec9b98adafbdebf51cfad059.jpg" alt="Daimond head">
+                    <div class="art-info">
+                        <h3>Daimond head</h3>
+                        <p>Hike to the summit of Diamond Head, an iconic volcanic crater in Hawaii, for stunning views of Honolulu and the Pacific Ocean.
+</p>
+                        <a href="https://www.google.com/maps/place/Diamond+Head/@21.2619826,-157.8059987,3091m/data=!3m2!1e3!4b1!4m6!3m5!1s0x7c0072619ae2ab3f:0xf7fe4029c4a94f59!8m2!3d21.261983!4d-157.8059987!16zL20vMDJseXo5?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+                <div class="art-piece">
+                    <img src="https://i.pinimg.com/736x/a6/f4/03/a6f40312a87b8537c26c271337aee610.jpg" alt="Waimea Canyon">
+                    <div class="art-info">
+                        <h3>Waimea Canyon</h3>
+                        <p>Explore the breathtaking Waimea Canyon in Kauai, known as the "Grand Canyon of the Pacific," with its vibrant red cliffs and lush greenery.
+</p>                 
+<a href="https://www.google.com/maps/place/Waimea+Canyon+State+Park/@22.0726785,-159.6656013,768m/data=!3m2!1e3!4b1!4m6!3m5!1s0x7c06555527af99f9:0x9f5bd265abc54f33!8m2!3d22.0726785!4d-159.6656013!16zL20vMDM1MWxo?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+                <div class="art-piece">
+                    <img src="https://i.pinimg.com/736x/11/34/90/113490ab0b7f795dde9164c07a8ebeb9.jpg" alt="Kona(Kailua-Kona)">
+                    <div class="art-info">
+                        <h3>Kona(Kailua-Kona)</h3>
+                        <p>Discover the vibrant town of Kailua-Kona on Hawaii's Big Island, known for its sunny beaches, rich history, and world-class coffee.
+
+</p>
+                        <a href="https://www.google.com/maps/place/Kailua-Kona,+HI,+USA/@19.6390595,-155.9992155,12494m/data=!3m2!1e3!4b1!4m6!3m5!1s0x79540eb26a91b401:0x7911d83882da5a7!8m2!3d19.6419129!4d-155.9962255!16zL20vMHJfZzA?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    // Card animations
+    const cards = document.querySelectorAll('.destination-card');
+    cards.forEach((card, index) => {
+        setTimeout(() => {
+            card.classList.add('animate');
+        }, index * 200 + 500);
+    });
+
+    // Feedback modal functionality
+    const modal = document.getElementById('feedbackModal');
+    const feedbackBtn = document.getElementById('feedbackBtn');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const feedbackForm = document.getElementById('feedbackForm');
+
+    feedbackBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    feedbackForm.onsubmit = function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Here you can add code to handle the form submission
+        console.log('Feedback submitted:', { name, email, message });
+        
+        // Clear form and close modal
+        feedbackForm.reset();
+        modal.style.display = "none";
+        alert('Thank you for your feedback!');
+    }
+});
+</script>
+
+</body>
+</html>

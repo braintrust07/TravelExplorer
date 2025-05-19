@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Design Your Website With Background Video</title>
+        <link rel="stylesheet" href="styleparis.css">
+    </head>
+    <body>
+        <div class="banner">
+            <video autoplay loop muted plays-inline>
+                <source src="parisvideo.mp4" type="video/mp4">
+            </video>
+            <script>
+            const video = document.querySelector("video");
+            video.addEventListener("timeupdate", () => {
+            if (video.currentTime >= video.duration - 0.1) {
+            video.currentTime = 0;
+            video.play();
+            }
+            });
+            </script>
+            <div class="navbar">
+                <ul>
+                    <li><a href="choicesparis.html">Places</a></li>
+                    <li><a href="parisfood.html">Food</a></li>
+                    <li><a href="parishotels.html">Hotels</a></li>
+                    <li><a href="shoppingparis.html">Shopping</a></li>
+                    <li><a href="parisweather.html">Weather</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1>Paris</h1>
+                <p>Paris isn’t just a city — it’s a living dream draped in elegance, romance, and timeless charm.From the shimmering lights of the Eiffel Tower to the cobblestone streets of Montmartre, every corner whispers a story.Lose yourself in world-class art at the Louvre, savor flakycroissants at a riverside café,and feel your heart dance to the rhythm of the Seine. Whether it’s fashion, history, cuisine, or simply magic you seek — Paris promises an unforgettable escape that you’ll want to relive again and again.Once you visit, you’ll never look at any other city the same way. </p>
+            </div>
+        </div>
+    </body>
+</html>

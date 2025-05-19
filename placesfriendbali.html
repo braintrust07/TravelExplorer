@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bali Beyond</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="placesfriends.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="balifood.html">Food</a>
+                    <a href="balihotels.html">Hotels</a>
+                    <a href="shoppingbali.html">Shopping</a>
+                    <a href="baliweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+    
+    <div class="container">
+
+        <div class="title-section">
+            <h1>Bali Beyond</h1>
+            <h2>Recommended Escapes for Friends</h2>
+        </div>
+
+        <div class="scroll-container">
+            <div class="places-wrapper">
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/a6/d4/0b/a6d40ba5dfe8ac57fd5a0651ad08f653.jpg" alt="Nusa Lembongan">
+                    </div>
+                    <div class="content">
+                        <h3>Nusa Lembongan</h3>
+                        <ul class="features">
+                            <li>Snorkeling Tours</li>
+                            <li>Beach Activities</li>
+                            <li>Island Hopping</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Nusa+Lembongan/@-8.6788085,115.4294603,14z/data=!3m1!4b1!4m6!3m5!1s0x2dd26d9f537b69f3:0xdc1b94bd6c67a033!8m2!3d-8.6785828!4d115.4555858!16s%2Fm%2F06znd0q?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/fe/e8/fb/fee8fb81130960535ca5a82270fc4dc9.jpg" alt="Sekumpul Waterfall">
+                    </div>
+                    <div class="content">
+                        <h3>Sekumpul Waterfall</h3>
+                        <ul class="features">
+                            <li>Guided Trek</li>
+                            <li>Natural Pools</li>
+                            <li>Scenic Views</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/search/Sekumpul+Waterfall+in+bali/@-8.1747004,115.1818221,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzxHJgc4cCpu5Vv5I1-LOM1vh-G7JjeAl0oQ&s" alt="Mount Batur">
+                    </div>
+                    <div class="content">
+                        <h3>Mount Batur</h3>
+                        <ul class="features">
+                            <li>Sunrise Trekking</li>
+                            <li>Volcano Views</li>
+                            <li>Hot Springs</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Mt+Batur/@-8.2401084,115.3671946,15z/data=!3m1!4b1!4m6!3m5!1s0x2dd1f403c8e8ee3f:0xd38045afa18670b4!8m2!3d-8.2401299!4d115.3774944!16zL20vMDR5NWZo?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/e2/6a/c7/e26ac7d0bcc292a93b44f8851088ef5c.jpg" alt="Bali Safari">
+                    </div>
+                    <div class="content">
+                        <h3>Bali Safari & Marine Park</h3>
+                        <ul class="features">
+                            <li>Wildlife Tours</li>
+                            <li>Marine Life</li>
+                            <li>Family Activities</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/The+Amazing+Taman+Safari+Bali/@-8.5819588,115.3432171,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd21446b81f7d39:0x34b39c786c2e54ec!8m2!3d-8.5819641!4d115.345792!16s%2Fm%2F0lkqtcl?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/00/7c/5a/007c5a660d85cfb8d367abadfc8abfd6.jpg" alt="Ulun Danu Bratan">
+                    </div>
+                    <div class="content">
+                        <h3>Pura Ulun Danu Bratan</h3>
+                        <ul class="features">
+                            <li>Temple Visit</li>
+                            <li>Lake Views</li>
+                            <li>Cultural Tour</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Ulun+Danu+Beratan+Temple/@-8.2751754,115.1642485,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd1896c9fac0857:0x18246568e4db1b53!8m2!3d-8.2751807!4d115.1668234!16s%2Fm%2F05zyg1h?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/45/11/b4/4511b445f33e72bbb4bcf8fe5e3e9b24.jpg" alt="Monkey Forest">
+                    </div>
+                    <div class="content">
+                        <h3>Monkey Forest</h3>
+                        <ul class="features">
+                            <li>Sacred Forest</li>
+                            <li>Temple Complex</li>
+                            <li>Wildlife Experience</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Sacred+Monkey+Forest+Sanctuary/@-8.5193674,115.258055,17z/data=!3m1!4b1!4m6!3m5!1s0x2dd23d43f6189b67:0xb6ec43164befc356!8m2!3d-8.5193727!4d115.2606299!16s%2Fm%2F03wc0td?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ... existing footer code ... -->
+
+            </div>
+    <script src="placesfriends.js"></script>
+</body>
+</html>

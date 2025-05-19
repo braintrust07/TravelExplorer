@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney Beyond</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="placesfriends.css">
+</head>
+<body>
+        
+     <nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="sydneyfood.html">Food</a>
+                    <a href="sydneyhotels.html">Hotels</a>
+                    <a href="shoppingsydney.html">Shopping</a>
+                    <a href="sydneyweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+        <div class="title-section">
+            <h1>Sydney Beyond</h1>
+            <h2>Recommended Escapes for Friends</h2>
+        </div>
+
+        <div class="scroll-container">
+            <div class="places-wrapper">
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/27/39/81/273981fccb512a5436e3f1090b22da1b.jpg" alt="Blue Mountains">
+                    </div>
+                    <div class="content">
+                        <h3>Blue Mountains</h3>
+                        <ul class="features">
+                            <li>Three Sisters View</li>
+                            <li>Scenic World Rides</li>
+                            <li>Hiking Trails</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/search/Blue+Mountains+in+sydney/@-33.8304657,150.2778397,9z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/7c/a3/2b/7ca32be0541ada500dd6359c878b324c.jpg" alt="Scenic Flight">
+                    </div>
+                    <div class="content">
+                        <h3>Scenic Helicopter Flight</h3>
+                        <ul class="features">
+                            <li>Harbour Views</li>
+                            <li>Coastal Experience</li>
+                            <li>City Landmarks</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/search/Scenic+Helicopter+Flight+in+sydney/@-33.8337569,150.7724668,11z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/6c/ec/04/6cec04f23f62d8360e1c8a25cb9aad0a.jpg" alt="Opera House">
+                    </div>
+                    <div class="content">
+                        <h3>Sydney Opera House</h3>
+                        <ul class="features">
+                            <li>Guided Tours</li>
+                            <li>Performance Shows</li>
+                            <li>Backstage Access</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/place/Sydney+Opera+House/@-33.8567799,151.2127218,17z/data=!3m1!4b1!4m6!3m5!1s0x6b12ae665e892fdd:0x3133f8d75a1ac251!8m2!3d-33.8567844!4d151.2152967!16zL20vMDZfbm0?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/5d/e3/3c/5de33c99eed7071b774dfd60f4c27f88.jpg" alt="Jet Boat">
+                    </div>
+                    <div class="content">
+                        <h3>Jet Boat Ride</h3>
+                        <ul class="features">
+                            <li>Thrill Ride</li>
+                            <li>Harbour Adventure</li>
+                            <li>Speed Experience</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/search/Jet+Boat+Ride+in+sydney/@-33.8560301,151.1255228,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/b1/a3/e6/b1a3e631f34a14570d06a2a3cd8eb855.jpg" alt="Hunter Valley">
+                    </div>
+                    <div class="content">
+                        <h3>Hunter Valley Wine Region</h3>
+                        <ul class="features">
+                            <li>Wine Tasting</li>
+                            <li>Vineyard Tours</li>
+                            <li>Gourmet Food</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/search/Hunter+Valley+Wine+Region+in+sydney/@-33.8563427,151.125523,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+
+                <div class="place-card">
+                    <div class="image-circle">
+                        <img src="https://i.pinimg.com/736x/e7/34/97/e73497912ca16e77e5696586e422f84a.jpg" alt="Harbour Cruise">
+                    </div>
+                    <div class="content">
+                        <h3>Sydney Harbour Cruise</h3>
+                        <ul class="features">
+                            <li>Sunset Sailing</li>
+                            <li>Lunch Cruises</li>
+                            <li>Bridge Views</li>
+                        </ul>
+                        <a href="https://www.google.com/maps/search/Sydney+Harbour+Cruise+/@-33.8564989,151.125523,13z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUxMi4wIKXMDSoASAFQAw%3D%3D" class="map-link">View on Map</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<!-- ... existing footer code ... -->
+
+
+
+<!-- ... existing footer code ... -->
+
+            </div>
+    <script src="placesfriends.js"></script>
+</body>
+</html>

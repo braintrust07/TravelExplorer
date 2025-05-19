@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Paris with Family</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <style>
+    body {
+      background-image:url("familybackground.jpg");
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-repeat:no-repeat;
+      background-size:1600px 950px;
+    }
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 1380px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #4E71FF;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4E71FF;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: #4E71FF;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #666;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+    color: #4E71FF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #FF9900;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#feedbackForm button {
+    background-color: #FF9900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#feedbackForm button:hover {
+    background-color: #FF7700;
+}
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left:550px;
+      margin-top: 55px;
+      gap: 40px;
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .column.offset {
+      margin-top: 50px;
+    }
+    .image-container {
+      max-width: 160px;
+      margin: 0 auto;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background:rgb(255, 255, 255);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .image-container img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+    .place-title {
+      margin: 12px 0 8px 0px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000000;
+    }
+    .place-description {
+      font-size: 0.85rem;
+      margin: 0 8px 12px 8px;
+      color: #000000;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .view-map {
+      margin-top: 10px;
+      display: block;
+      color: #4E71FF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .view-map:hover {
+      color: #4E71FF;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="parisfood.html">Food</a>
+                    <a href="parishotels.html">Hotels</a>
+                    <a href="shoppingparis.html">Shopping</a>
+                    <a href="parisweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+
+<div class="gallery">
+  
+  <!-- Column 1 -->
+  <div class="column" style="margin-top: 120px;">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.FBGPl7tq4kXnnLAED4s9AQHaEK&pid=Api&P=0&h=180" alt="Louvre Museum">
+      </a>
+      <h3 class="place-title">Louvre Museum</h3>
+      <p class="place-description">Louvre Museum in Paris, famous for its vast art collection and the Mona Lisa.
+</p>
+      <a href="https://www.google.com/maps/place/Louvre+Museum/@48.8606146,2.3350691,545m/data=!3m3!1e3!4b1!5s0x47f112d46c2f6eef:0xfb8a933f53aec2c6!4m6!3m5!1s0x47e671d877937b0f:0xb975fcfa192f84d4!8m2!3d48.8606111!4d2.337644!16zL20vMDRnZHI?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 2 -->
+  <div class="column">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.lUElCdifJ87Iv8optOCcpwHaEn&pid=Api&P=0&h=180" alt="seine rivercruise">
+      </a>
+      <h3 class="place-title">seine rivercruise</h3>
+      <p class="place-description">Seine River Cruise in Paris, famous for scenic views of the city's iconic landmarks.
+</p>
+      <a href="https://www.google.com/maps/search/seine+river+cruise+in+paris/@48.860385,2.2745106,2182m/data=!3m1!1e3?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://i.pinimg.com/originals/44/4a/35/444a353403978c47a6d242901e783d4a.jpg" alt="Disney World">
+      </a>
+      <h3 class="place-title">Disney World</h3>
+      <p class="place-description">Disneyland Paris, famous for its magical theme parks and fairy-tale experiences.
+</p>
+      <a href="https://www.google.com/maps/place/Disneyland+Paris/@48.8673892,2.7787221,545m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47e61d19ca7ae2bd:0x57faf8cb6310e660!8m2!3d48.8673858!4d2.783593!16s%2Fg%2F1211qgxn?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 3 (offset) -->
+  <div class="column offset">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.2fzkVawLjI_ZA6io9MtQugHaE8&pid=Api&P=0&h=180" alt="Atelier deslumieres lepetit prince">
+      </a>
+      <h3 class="place-title">Atelier deslumieres lepetit prince</h3>
+      <p class="place-description">Atelier des Lumières in Paris, famous for its immersive art exhibitions like *The Little Prince*.
+</p>
+      <a href="https://www.google.com/maps/place/Atelier+des+Lumi%C3%A8res/@48.8616185,2.3782381,545m/data=!3m2!1e3!4b1!4m6!3m5!1s0x47e66df0dcd89465:0xe6f9d92ace6637ea!8m2!3d48.861615!4d2.380813!16s%2Fg%2F11f7r5yn26?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://worldinparis.com/wp-content/uploads/2018/02/Moulin-Rouge-Paris.jpg" alt="Moulin rouge carbaret show">
+      </a>
+      <h3 class="place-title">Moulin rouge carbaret show</h3>
+      <p class="place-description">Moulin Rouge in Paris, famous for its iconic cabaret shows and vibrant nightlife.</p>
+      <a href="https://www.google.com/maps/place/Moulin+Rouge/@48.8841267,2.329677,545m/data=!3m3!1e3!4b1!5s0x47e66e4eff4a3311:0x290e821789a4719e!4m6!3m5!1s0x47e66e4eff6f0c89:0xf44e90af87482111!8m2!3d48.8841232!4d2.3322519!16zL20vMGJ4Y2g?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 4 -->
+  <div class="column" style="margin-top: 200px;">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://windows10spotlight.com/wp-content/uploads/2020/09/3b5a0b2fe4075caf097501f948cfc4cf.jpg" alt="Versailles palace and gardens">
+      </a>
+      <h3 class="place-title">Versailles palace and gardens</h3>
+      <p class="place-description">Palace of Versailles in Paris, famous for its grand architecture and exquisite garden.</p>
+      <a href="https://www.google.com/maps/search/Versailles+palace+and+gardens+in+paris/@48.8074787,2.1050115,1092m/data=!3m2!1e3!4b1?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+</div>
+<script>
+// Feedback modal functionality
+    const modal = document.getElementById('feedbackModal');
+    const feedbackBtn = document.getElementById('feedbackBtn');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const feedbackForm = document.getElementById('feedbackForm');
+
+    feedbackBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    feedbackForm.onsubmit = function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Here you can add code to handle the form submission
+        console.log('Feedback submitted:', { name, email, message });
+        
+        // Clear form and close modal
+        feedbackForm.reset();
+        modal.style.display = "none";
+        alert('Thank you for your feedback!');
+    }
+});
+</script>
+
+</body>
+</html>

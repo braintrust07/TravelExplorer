@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <title>Hawaii with Family</title>
+  <style>
+    body {
+      background-image:url("familybackground.jpg");
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 20px;
+      background-repeat:no-repeat;
+      background-size:1600px 1000px;
+    }
+    .navbar {
+    position: fixed;
+    top: 0;
+    left: 1380px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.nav-links a {
+    color: #4E71FF;
+    font-size: 1.2rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4E71FF;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background: none;
+    border: none;
+    color: #4E71FF;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 0;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 4px;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #666;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+    background-color: #f9f9f9;
+    color: #4E71FF;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1001;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+}
+
+.close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 28px;
+    cursor: pointer;
+    color: #666;
+}
+
+.close:hover {
+    color: #FF9900;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.form-group textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+#feedbackForm button {
+    background-color: #FF9900;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#feedbackForm button:hover {
+    background-color: #FF7700;
+}
+
+    .gallery {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin-left:550px;
+      margin-top: 55px;
+      gap: 40px;
+    }
+    .column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+    .column.offset {
+      margin-top: 50px;
+    }
+    .image-container {
+      max-width: 160px;
+      margin: 0 auto;
+      padding: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background:rgb(255, 255, 255);
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.5);
+    }
+    .image-container img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+    .image-container img:hover {
+      transform: scale(1.05);
+    }
+    .place-title {
+      margin: 12px 0 8px 0px;
+      font-size: 1rem;
+      font-weight: bold;
+      color: #000000;
+    }
+    .place-description {
+      font-size: 0.85rem;
+      margin: 0 8px 12px 8px;
+      color: #000000;
+      text-align: center;
+      line-height: 1.4;
+    }
+    .view-map {
+      margin-top: 10px;
+      display: block;
+      color: #4E71FF;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+    .view-map:hover {
+      color: #4E71FF;
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+<nav class="navbar">
+        <div class="nav-links">
+            <a href="main.html"><i class="fas fa-home"></i></a>
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fas fa-compass"></i></button>
+                <div class="dropdown-content">
+                    <a href="hawaiifood.html">Food</a>
+                    <a href="hawaiihotels.html">Hotels</a>
+                    <a href="shoppinghawaii.html">Shopping</a>
+                    <a href="hawaiiweather.html">Weather</a>
+                </div>
+            </div>
+            <a href="#" id="feedbackBtn"><i class="fas fa-comments"></i></a>
+        </div>
+    </nav>
+
+    <div id="feedbackModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Share Your Feedback</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" required></textarea>
+                </div>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+<div class="gallery">
+  <!-- Column 1 -->
+  <div class="column" style="margin-top: 120px;">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://i.pinimg.com/736x/0c/72/f8/0c72f81250e0a0c2af6cef3ded5bef81.jpg" alt="halona blow hole">
+      </a>
+      <h3 class="place-title">Halona Blowhole</h3>
+      <p class="place-description">Halona Blowhole in Hawaii is a natural ocean geyser that spectacularly shoots water into the air through a volcanic rock formation.</p>
+      <a href="https://www.google.com/maps/place/Halona+Blow+Hole/@21.2821571,-157.676693,3090m/data=!3m2!1e3!4b1!4m6!3m5!1s0x7c001222bd45f7d5:0xceef644a2a19fd30!8m2!3d21.2821575!4d-157.676693!16s%2Fm%2F0260_9l?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 2 -->
+  <div class="column">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://i.pinimg.com/736x/27/37/72/27377261b7b9e9441389d805370baffd.jpg" alt="blue mountains">
+      </a>
+      <h3 class="place-title">Mokolii Island</h3>
+      <p class="place-description">Mokoli‘i Island, also known as Chinaman’s Hat, is a small, scenic islet off Oahu’s coast, famous for its distinctive shape and beautiful surroundings.
+</p>
+      <a href="https://i.pinimg.com/736x/27/37/72/27377261b7b9e9441389d805370baffd.jpg" target="_blank" class="view-map">View on Map</a>
+    </div>
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse2.mm.bing.net/th?id=OIP.EbuXmrUms5Hd1opmD5y6BQHaEZ&pid=Api&P=0&h=180" alt="Oahu North shore">
+      </a>
+      <h3 class="place-title">Oahu North Shore</h3>
+      <p class="place-description">Oahu’s North Shore in Hawaii is renowned for its legendary surf waves, laid-back vibe, and stunning beaches.</p>
+      <a href="https://www.google.com/maps/place/North+Shore,+Waialua,+HI,+USA/@21.5989375,-158.1007656,49338m/data=!3m2!1e3!4b1!4m6!3m5!1s0x7c0058d750407b39:0xc4328514b8045aa2!8m2!3d21.5616575!4d-158.0715983!16zL20vMDZybDdj?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 3 (offset) -->
+  <div class="column offset">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.7wE2IeIopsF-qVIViWXPMQHaE6&pid=Api&P=0&h=180" alt="Atelier deslumieres lepetit prince">
+      </a>
+      <h3 class="place-title">Pearl Harbour National Memorial</h3>
+      <p class="place-description">The Pearl Harbor National Memorial in Hawaii honors the lives lost during the 1941 attack and preserves the historic significance of the site.</p>
+      <a href="https://www.google.com/maps/place/Pearl+Harbor+National+Memorial/@21.3675985,-157.938858,772m/data=!3m2!1e3!4b1!4m6!3m5!1s0x7c006f4309506633:0xb8c592a70d9c602c!8m2!3d21.3675985!4d-157.938858!16s%2Fg%2F11c60nstxc?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse3.mm.bing.net/th?id=OIP.77rz-IGouRnqLk7ld5noggHaE8&pid=Api&P=0&h=180" alt="Moulin rouge carbaret show">
+      </a>
+      <h3 class="place-title">Na pali coast</h3>
+      <p class="place-description">The Nā Pali Coast in Hawaii is a breathtaking stretch of rugged cliffs, lush valleys, and pristine beaches accessible mainly by boat, hike, or helicopter.</p>
+<a href="https://www.google.com/maps/place/N%C4%81+Pali+Coast+State+Wilderness+Park/@22.1682018,-159.6577381,768m/data=!3m2!1e3!4b1!4m6!3m5!1s0x7c06f8a4b13bbcef:0x3b12ba01041a867e!8m2!3d22.1682018!4d-159.6577381!16zL20vMDZjYjZu?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+  <!-- Column 4 -->
+  <div class="column" style="margin-top: 200px;">
+    <div class="image-container">
+      <a href="https://www.google.com/imghp" target="_blank">
+        <img src="https://tse4.mm.bing.net/th?id=OIP.yqd3V_fVOlVZcYH5xg-oPQHaE7&pid=Api&P=0&h=180" alt="Versailles palace and gardens">
+      </a>
+      <h3 class="place-title">Road to Hana</h3>
+      <p class="place-description">The Road to Hana in Maui is a scenic drive winding through lush rainforests, waterfalls, and dramatic coastal views.</p>
+      <a href="https://www.google.com/maps/place/Hana+Hwy,+Hawaii,+USA/@20.8546661,-156.1694682,775m/data=!3m2!1e3!4b1!4m6!3m5!1s0x7954b5fcb35d9b41:0x4467d025ea9061a8!8m2!3d20.8546661!4d-156.1694682!16zL20vMDRsemho?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="view-map">View on Map</a>
+    </div>
+  </div>
+
+</div>
+<script>
+// Feedback modal functionality
+    const modal = document.getElementById('feedbackModal');
+    const feedbackBtn = document.getElementById('feedbackBtn');
+    const closeBtn = document.getElementsByClassName('close')[0];
+    const feedbackForm = document.getElementById('feedbackForm');
+
+    feedbackBtn.onclick = function() {
+        modal.style.display = "block";
+    }
+
+    closeBtn.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    feedbackForm.onsubmit = function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+
+        // Here you can add code to handle the form submission
+        console.log('Feedback submitted:', { name, email, message });
+        
+        // Clear form and close modal
+        feedbackForm.reset();
+        modal.style.display = "none";
+        alert('Thank you for your feedback!');
+    }
+});
+</script>
+</body>
+</html>
